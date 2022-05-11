@@ -5,7 +5,7 @@
 #include "APDS9960/apds9960.h"
 
 // Prototypes
-void COLOR_SENSOR_testColorSensor(void);
+char* COLOR_SENSOR_testColorSensor(void);
 bool_e COLOR_SENSOR_meetCrossLine(void);
 bool_e COLOR_SENSOR_isOnLine(void);
 

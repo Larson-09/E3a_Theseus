@@ -2,12 +2,12 @@
 #define US_SENSOR_H
 
 // Includes
-#include "HCSR04.h"
+#include "HC-SR04/HCSR04.h"
 
 // Prototypes
 void US_SENSOR_test(void);
 void US_SENSOR_signalObstacle(int16_t instructionIndex);
-system_state* US_SENSOR_computeNewItinerary(System_State* initialItinerary, instructionIndexWithObstacle);
+Direction* US_SENSOR_computeNewItinerary(Direction* initialItinerary,int instructionIndexWithObstacle);
 
 
 #endif /*US_SENSOR_H*/

@@ -25,7 +25,7 @@ char* COLOR_SENSOR_testColorSensor(void){
 			green = (uint16_t)(((uint32_t)green*100)/ambiant);
 		}
 
-		char* rgbCode = "";
+		char* rgbCode;
 		sprintf(rgbCode, "A:%d\tR:%d\tG:%d\tB:%d\n",ambiant, red, green, blue);
 		HAL_Delay(500);
 
