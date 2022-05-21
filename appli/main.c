@@ -37,16 +37,16 @@ static void stateMachine();
 int main(void)
 {
 	//Initialisation de la couche logicielle HAL (Hardware Abstraction Layer)
-	//Cette ligne doit rester la première étape de la fonction main().
+	//Cette ligne doit rester la premiï¿½re ï¿½tape de la fonction main().
 	HAL_Init();
 
 
-	//Initialisation de l'UART2 à la vitesse de 115200 bauds/secondes (92kbits/s) PA2 : Tx  | PA3 : Rx.
-		//Attention, les pins PA2 et PA3 ne sont pas reliées jusqu'au connecteur de la Nucleo.
-		//Ces broches sont redirigées vers la sonde de débogage, la liaison UART étant ensuite encapsulée sur l'USB vers le PC de développement.
+	//Initialisation de l'UART2 ï¿½ la vitesse de 115200 bauds/secondes (92kbits/s) PA2 : Tx  | PA3 : Rx.
+		//Attention, les pins PA2 et PA3 ne sont pas reliï¿½es jusqu'au connecteur de la Nucleo.
+		//Ces broches sont redirigï¿½es vers la sonde de dï¿½bogage, la liaison UART ï¿½tant ensuite encapsulï¿½e sur l'USB vers le PC de dï¿½veloppement.
 	UART_init(UART2_ID,115200);
 
-	//"Indique que les printf sortent vers le périphérique UART2."
+	//"Indique que les printf sortent vers le pï¿½riphï¿½rique UART2."
 	SYS_set_std_usart(UART2_ID, UART2_ID, UART2_ID);
 
 	//Initialisation du port de la led Verte (carte Nucleo)
@@ -61,9 +61,8 @@ int main(void)
 }
 
 static void testComponents(void){
-	SECRETARY_process_main();
-	char* rgbCode = COLOR_SENSOR_testColorSensor();
-	printf(rgbCode);
+	//SECRETARY_process_main();
+	US_SENSOR_test();
 }
 
 //static void stateMachine(){
